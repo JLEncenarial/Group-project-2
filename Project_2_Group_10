@@ -39,64 +39,6 @@
       ]
     },
     {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "cKohsLvjT0ib"
-      },
-      "source": [
-        "# Project 2 - Veggie Classification\n",
-        "\n",
-        "For this assignment you'll need to classify some images of vegetables.\n",
-        "\n",
-        "## Parts\n",
-        "\n",
-        "Please do two separate classifications:\n",
-        "<ol>\n",
-        "<li> First, create a model from scratch.\n",
-        "<li> Use transfer learning to use a pretrained model of your choice, adapted to this data.\n",
-        "</ol>\n",
-        "\n",
-        "There won't be an explicit evaluation of accuracy, but you should take some steps to make each model as accurate as you reasonably can, any tuning option is fair game. Along with that, please structure it into a notebook that is well structured and clear that explains what you did and found. Think about:\n",
-        "<ul>\n",
-        "<li> Sections and headings.\n",
-        "<li> A description of the approach taken (e.g. what did you do to determine size, tune, evaluate, etc...)\n",
-        "<li> Visualization of some important things such as a confusion matrix and maybe some images.\n",
-        "<li> Results, mainly focused on the scoring of the test data.\n",
-        "</ul>\n",
-        "\n",
-        "The descriptions and explainations should highlight the choices you made and why you made them. Figure up to about a page or so worth of text total, explain what happened but don't write an essay.\n",
-        "\n",
-        "## Deliverables\n",
-        "\n",
-        "Please sumbmit a link to your github, where everyhting is fully run with all the outputs showing on the page. As well, in the notebook please add some kind of switch controlled by a variable that will control if the notebook runs to train the model or to load the model in from weights - so I can download it and click run all, it will load the saved weights, and predict.\n",
-        "\n",
-        "### Dataset\n",
-        "\n",
-        "The code in the start of this notebook will download and unzip the dataset, and there is also a simple example of creating datasets. You can change the dataset bit to use a different approach if you'd like. The data is already split into train, validation, and test sets. Please treat the separate test set as the final test set, and don't use it for any training or validation. Each folder name is its own label.\n",
-        "\n",
-        "### Evaluation\n",
-        "\n",
-        "Marking will be based on the following:\n",
-        "<ul>\n",
-        "<li> Models are cretaed, tuned, and effective at classifying the data: 40%\n",
-        "<li> Descriptions and explanations of the approach taken: 20%\n",
-        "<li> Code is well structured and clear: 20%\n",
-        "</ul>\n",
-        "\n",
-        "Overall the marking is pretty simple and direct, walk through the process of predicting the veggies, explain what you did, and show the results. If you do that, it'll get a good mark.\n",
-        "\n",
-        "### Tips\n",
-        "\n",
-        "Some hints that may be helpful to keep in mind:\n",
-        "<ul>\n",
-        "<li> The data is pretty large, so you'll want to use datasets rather than load everything into memory. The Keras docs have a few examples of different ways to load image data, our examples showed image generators and the image from directory datasets.  \n",
-        "<li> Be careful of batch size, you may hit the colab limits.\n",
-        "<li> You'll want to use checkpoints so you can let it train and pick up where you left off.\n",
-        "<li> When developing, using a smaller dataset sample is a good idea. These weights could also be saved and loaded to jump start training on the full data.\n",
-        "<li>"
-      ]
-    },
-    {
       "cell_type": "code",
       "execution_count": 3,
       "metadata": {
@@ -445,24 +387,6 @@
         "                 validation_data=val_ds,\n",
         "                 validation_steps=25)"
       ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "Z_8o6xytT0ie"
-      },
-      "source": [
-        "## Transfer Learning Model"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": 10,
-      "metadata": {
-        "id": "N4DaKyYyT0ie"
-      },
-      "outputs": [],
-      "source": []
     },
     {
       "cell_type": "markdown",
